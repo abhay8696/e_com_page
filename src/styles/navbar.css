@@ -1,1 +1,168 @@
-/*# sourceMappingURL=navbar.css.map */
+.navbar {
+  display: grid;
+  border-bottom: 1px solid hsl(220deg, 14%, 75%);
+}
+@media only screen and (max-width: 720px) {
+  .navbar {
+    margin: 0 5vw;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 10vh;
+  }
+  .navbar .menuButt {
+    margin-right: 1rem;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .navbar {
+    margin: 0 10vw;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-auto-rows: 15vh;
+  }
+  .navbar .menuButt {
+    display: none;
+  }
+}
+.navbar .appLogo, .navbar .menu, .navbar .cart_profile {
+  display: flex;
+}
+.navbar .appLogo {
+  align-items: center;
+  border-bottom: 5px solid hsla(26deg, 100%, 55%, 0);
+}
+.navbar .appLogo img:hover {
+  cursor: pointer;
+}
+.navbar .menu {
+  color: hsl(221deg, 10%, 52%);
+  align-items: baseline;
+}
+.navbar .menu span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 5px solid hsla(26deg, 100%, 55%, 0);
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .navbar .menu span {
+    margin: 0 0.5rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .navbar .menu span {
+    margin: 0 1rem;
+  }
+}
+.navbar .menu span:hover {
+  cursor: pointer;
+  color: hsl(217deg, 48%, 5%);
+  fill: hsl(217deg, 48%, 5%);
+  border-bottom: 5px solid hsl(26deg, 100%, 55%);
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .navbar .menu {
+    margin-left: 1rem;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .navbar .menu {
+    display: none;
+  }
+}
+.navbar .cart_profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar .cart_profile svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #69707D;
+}
+@media only screen and (max-width: 480px) {
+  .navbar .cart_profile svg:active {
+    cursor: pointer;
+    color: hsl(217deg, 48%, 5%);
+    fill: hsl(217deg, 48%, 5%);
+  }
+}
+@media only screen and (min-width: 480px) {
+  .navbar .cart_profile svg:hover {
+    cursor: pointer;
+    color: hsl(217deg, 48%, 5%);
+    fill: hsl(217deg, 48%, 5%);
+  }
+}
+.navbar .cart_profile img {
+  max-width: 3rem;
+  border: 3px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .navbar .cart_profile img {
+    max-width: 2.5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navbar .cart_profile img:active {
+    border: 3px solid hsl(26deg, 100%, 55%);
+    border-radius: 50%;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .navbar .cart_profile img:hover {
+    cursor: pointer;
+    border: 3px solid hsl(26deg, 100%, 55%);
+    border-radius: 50%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .navbar .cart_profile .profile_image {
+    margin-left: 1.5rem;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .navbar .cart_profile .profile_image {
+    margin-left: 1rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .navbar .cart_profile .profile_image {
+    margin-left: 2rem;
+  }
+}
+
+.sideBar {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.747);
+  position: absolute;
+  display: flex;
+  top: 0vh;
+}
+.sideBar .sideBarBody {
+  background-color: rgb(255, 255, 255);
+  width: 70vw;
+  padding: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sideBar .sideBarBody * {
+  margin: 1rem;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+.sideBar .sideBarBody svg {
+  width: 2rem;
+  height: 2rem;
+}
+.sideBar .blankSidebarBody {
+  height: 100%;
+  width: 30vw;
+  opacity: 0;
+}
+@media only screen and (min-width: 720px) {
+  .sideBar {
+    display: none;
+  }
+}/*# sourceMappingURL=navbar.css.map */
