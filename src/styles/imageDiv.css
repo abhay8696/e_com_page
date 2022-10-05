@@ -1,0 +1,114 @@
+.imageDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 720px) {
+  .imageDiv {
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .imageDiv {
+    padding: 2rem 2rem;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .imageDiv {
+    padding: 2rem 2rem;
+  }
+}
+.imageDiv .previewDiv1 {
+  background-image: url("../data//images/image-product-1.jpg");
+  background-position: center;
+}
+.imageDiv .previewDiv2 {
+  background-image: url("../data//images/image-product-2.jpg");
+  background-position: top;
+}
+.imageDiv .previewDiv3 {
+  background-image: url("../data//images/image-product-3.jpg");
+  background-position: top;
+}
+.imageDiv .previewDiv4 {
+  background-image: url("../data//images/image-product-4.jpg");
+  background-position: top;
+}
+.imageDiv .previewDiv1, .imageDiv .previewDiv2, .imageDiv .previewDiv3, .imageDiv .previewDiv4 {
+  background-size: 100vw;
+}
+@media only screen and (max-width: 480px) {
+  .imageDiv .previewDiv1, .imageDiv .previewDiv2, .imageDiv .previewDiv3, .imageDiv .previewDiv4 {
+    height: 33vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .imageDiv .previewDiv1 .arrowButt, .imageDiv .previewDiv2 .arrowButt, .imageDiv .previewDiv3 .arrowButt, .imageDiv .previewDiv4 .arrowButt {
+    background-color: rgba(255, 255, 255, 0.548);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imageDiv .previewDiv1 .arrowButt:active, .imageDiv .previewDiv2 .arrowButt:active, .imageDiv .previewDiv3 .arrowButt:active, .imageDiv .previewDiv4 .arrowButt:active {
+    background-color: rgb(255, 255, 255);
+  }
+  .imageDiv .previewDiv1 .arrowButt svg, .imageDiv .previewDiv2 .arrowButt svg, .imageDiv .previewDiv3 .arrowButt svg, .imageDiv .previewDiv4 .arrowButt svg {
+    fill: none;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .imageDiv .previewDiv1, .imageDiv .previewDiv2, .imageDiv .previewDiv3, .imageDiv .previewDiv4 {
+    background: none;
+  }
+  .imageDiv .previewDiv1 .arrowButt, .imageDiv .previewDiv2 .arrowButt, .imageDiv .previewDiv3 .arrowButt, .imageDiv .previewDiv4 .arrowButt {
+    display: none;
+  }
+}
+.imageDiv .previewDiv1 .productImage, .imageDiv .previewDiv2 .productImage, .imageDiv .previewDiv3 .productImage, .imageDiv .previewDiv4 .productImage {
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 720px) {
+  .imageDiv .previewDiv1 .productImage, .imageDiv .previewDiv2 .productImage, .imageDiv .previewDiv3 .productImage, .imageDiv .previewDiv4 .productImage {
+    max-width: 350px;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .imageDiv .previewDiv1 .productImage, .imageDiv .previewDiv2 .productImage, .imageDiv .previewDiv3 .productImage, .imageDiv .previewDiv4 .productImage {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .imageDiv .previewDiv1 .productImage, .imageDiv .previewDiv2 .productImage, .imageDiv .previewDiv3 .productImage, .imageDiv .previewDiv4 .productImage {
+    display: none;
+  }
+}
+.imageDiv .thumbnails {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 480px) {
+  .imageDiv .thumbnails {
+    display: none;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .imageDiv .thumbnails {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .imageDiv .thumbnails {
+    width: 350px;
+  }
+}
+.imageDiv .thumbnails img {
+  max-width: 5rem;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=imageDiv.css.map */
