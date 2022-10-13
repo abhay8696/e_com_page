@@ -4,7 +4,8 @@ import '../styles/navbar.css'
 import logo from '../data/images/logo.svg';
 import cart from '../data/images/icon-cart.svg';
 import profileImage from '../data/images/image-avatar.png';
-const Navbar = () => {
+const Navbar = props => {
+    const { cartData } = props;
     //states
     const [ sideBar, setSideBar ] = useState(false);
     const [ openCart, setOpenCart ] = useState(false);
@@ -30,11 +31,36 @@ const Navbar = () => {
         return(
             <div className='cartDiv'>
                 <div className='cartHead'>Cart</div>
-                <div className='cartBody'>
-                    <span>Your cart is empty.</span>
-                </div>
+                {dispCartData()}
             </div>
         )
+    },
+    dispCartData = ()=> {
+        if(cartData?.length){
+            return (
+                <div className='cartBody'>
+                    {dispUnit()}
+                </div>)
+        }else{
+            return(
+                <div className='cartBody'>
+                    <span>Your cart is empty.</span>
+                </div>)
+        }
+    },
+    dispUnit = ()=> {
+        let arr = [];
+        if(cartData?.length){
+            cartData.forEach(i=> {
+                arr.push(
+                    <div>
+                        <img src={i.shoeImg} width='100px'/>
+                        <span>qty : {i.qty}</span>
+                    </div>
+                )
+            });
+        }
+        return arr;
     }
     return (
         <>

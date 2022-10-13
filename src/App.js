@@ -15,10 +15,12 @@ function App() {
   const shoeImages= [image1, image2, image3, image4];
   const [ selected, setSelected ] = useState([shoeImages[0], 1]);
   const [ selectedQty, setSelectedQty ] = useState(0);
+  const [ cartData, setCartData ] = useState([]);
 
   //functions
   const 
   chooseShoe = num=> {
+    setSelectedQty(0);
     if(num >= 5){
       return setSelected([shoeImages[0], 1]);
     }
@@ -30,14 +32,24 @@ function App() {
   addMinus = num=> {
     if(num<=0) return setSelectedQty(0);
     return setSelectedQty(num);
+  },
+  addToCart = ()=> {
+    if(selectedQty>0){
+      let data = {
+        shoeImg: selected[0],
+        qty: selectedQty
+      }
+      return setCartData([...cartData, data])
+    }
+    return console.log('empty cart!');
   }
-  
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar cartData={cartData}/>
       <div className='body'>
         <ImageDiv chooseShoe={chooseShoe} shoeImages={shoeImages} selected={selected}/>
-        <ProductInfo selectedQty={selectedQty} addMinus={addMinus}/>
+        <ProductInfo selectedQty={selectedQty} addMinus={addMinus} addToCart={addToCart}/>
       </div>
     </div>
   );
