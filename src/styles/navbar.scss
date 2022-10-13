@@ -19,6 +19,9 @@
             display: none;
         }
     }
+    @include md-lg-screen{
+        margin: 0 5vw;
+    }
     border-bottom: 1px solid hsl(220, 14%, 75%);
     .appLogo, .menu, .cart_profile{
         display: flex;

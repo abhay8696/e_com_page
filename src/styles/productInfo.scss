@@ -1,0 +1,163 @@
+@import 'breakpoints';
+@import 'flexbox';
+
+.productInfo{
+    max-width: 500px;
+    display: grid;
+    grid-template-rows: auto;
+    @include md-below-screen{
+        // padding: 4rem 2rem;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:    
+                            "header header"
+                            "tagline tagline"
+                            "para para"
+                            "money money"
+                            "qty cart";
+    }
+    @include md-lg-screen{
+        padding: 4rem 0;
+        grid-template-columns: 80% 20%;
+        grid-template-areas:    
+                            "header header"
+                            "tagline tagline"
+                            "para para"
+                            "money money"
+                            "qty ."
+                            "cart .";
+    }
+    @include lg-above-screen{
+        padding: 4rem 2rem;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:    
+                            "header header"
+                            "tagline tagline"
+                            "para para"
+                            "money money"
+                            "qty cart";
+    }
+    @include md-above-screen{
+        // padding: 4rem 1rem;
+    }
+    @include sm-md-screen{
+        padding: 2rem 2rem;
+    }
+    @include md-lg-screen{
+        padding: 2rem 1rem;
+    }
+    & > *{
+        @include md-below-screen{
+            max-width: 350px;
+        }
+        @include md-above-screen{
+            max-width: 400px;
+        }
+        padding-bottom: 1rem;
+    }
+    h1{
+        color:  hsl(26, 100%, 55%);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-top: 2.5rem;
+        grid-area: header;
+        @include md-lg-screen{
+            margin-top: 0;
+        }
+    }
+    .tagLine{
+        font-size: 2.5rem;
+        font-weight: 900;
+        grid-area: tagline;
+    }
+    p{
+        color: #788091;
+        line-height: 150%;
+        font-size: 14px;
+        grid-area: para;
+    }
+    .price{
+        grid-area: money;
+        font-weight: 900;
+        .priceChild{
+            @include flexbox('', center, flex-start);
+            .activePrice{
+                font-size: 2.5rem;
+            }
+            .discount{
+                align-self: center;
+                justify-self: self-start;
+                background-color: hsl(25, 100%, 94%);
+                color:  hsl(26, 100%, 55%);
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.3rem;
+                margin-left: 1rem;
+            }
+            margin-bottom: 0.5rem;
+        }
+        .ogPrice{
+            align-self: center;
+            color: hsl(0, 0%, 69%);
+            text-decoration: line-through;
+        }
+    }
+    .quantity{
+        grid-area: qty;
+        @include lg-xl-screen{
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+        @include md-below-screen{
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+        @include md-lg-screen{
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+        }
+        padding: 0;
+        @include flexbox('', center, space-around);
+        background-color: hsl(228, 6%, 85%);
+        border-radius: 0.5rem;
+        .qtyMinus, .qtyPlus{
+            svg{
+                fill: #FF7E1B;
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+    .addToCart{
+        grid-area: cart;
+        padding: 0;
+        // margin-left: 1rem;
+        @include md-below-screen{
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            padding: 0.5rem;
+        }
+        @include lg-xl-screen{
+            margin-bottom: 1rem;
+            margin-left: 0;
+            padding: 0.3rem 0.5rem;
+        }
+        @include md-lg-screen{
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+        }
+        @include lg-above-screen{
+            margin-left: 1rem;
+        }
+        background-color: #FF7E1B;
+        border-radius: 0.5rem;
+        @include flexbox('', center, center);
+        color: white;
+        font-weight: 900;
+        svg{
+            fill: #fff;
+            margin-right: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+}

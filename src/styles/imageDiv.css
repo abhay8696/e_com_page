@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: "";
 }
 @media only screen and (min-width: 720px) {
   .imageDiv {
@@ -15,7 +16,7 @@
 }
 @media only screen and (min-width: 720px) and (max-width: 960px) {
   .imageDiv {
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
   }
 }
 .imageDiv .previewDiv1 {
@@ -42,6 +43,7 @@
     height: 33vh;
     width: 100vw;
     display: flex;
+    flex-direction: "";
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
@@ -52,6 +54,7 @@
     width: 2.5rem;
     border-radius: 50%;
     display: flex;
+    flex-direction: "";
     align-items: center;
     justify-content: center;
   }
@@ -73,12 +76,12 @@
 .imageDiv .previewDiv1 .productImage, .imageDiv .previewDiv2 .productImage, .imageDiv .previewDiv3 .productImage, .imageDiv .previewDiv4 .productImage {
   border-radius: 1rem;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 960px) {
   .imageDiv .previewDiv1 .productImage, .imageDiv .previewDiv2 .productImage, .imageDiv .previewDiv3 .productImage, .imageDiv .previewDiv4 .productImage {
     max-width: 350px;
   }
 }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 960px) {
   .imageDiv .previewDiv1 .productImage, .imageDiv .previewDiv2 .productImage, .imageDiv .previewDiv3 .productImage, .imageDiv .previewDiv4 .productImage {
     max-width: 400px;
   }
@@ -91,6 +94,8 @@
 .imageDiv .thumbnails {
   margin-top: 1.5rem;
   display: flex;
+  flex-direction: "";
+  align-items: "";
   justify-content: space-between;
 }
 @media only screen and (max-width: 480px) {
@@ -98,12 +103,12 @@
     display: none;
   }
 }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 960px) {
   .imageDiv .thumbnails {
     width: 400px;
   }
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 960px) {
   .imageDiv .thumbnails {
     width: 350px;
   }

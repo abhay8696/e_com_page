@@ -1,9 +1,8 @@
 @import 'breakpoints';
+@import 'flexbox';
 
 .imageDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox(column, center, '');
     @include md-above-screen{
         padding: 4rem 2rem;
     }
@@ -11,7 +10,7 @@
         padding: 2rem 2rem;
     }
     @include md-lg-screen{
-        padding: 2rem 2rem;
+        padding: 2rem 1rem;
     }
 
     .previewDiv1{
@@ -36,9 +35,7 @@
         @include sm-below-screen{
             height: 33vh;
             width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flexbox('', center, space-between);
             padding: 0 1rem;
             .arrowButt{
                 background-color: rgba(255, 255, 255, 0.548);
@@ -48,9 +45,7 @@
                 height: 2.5rem;
                 width: 2.5rem;
                 border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flexbox('', center, center);
                 svg{
                     fill: none;
                 }
@@ -64,10 +59,10 @@
         }
         .productImage{
             border-radius: 1rem;
-            @include md-below-screen{
+            @include lg-below-screen{
                 max-width: 350px;
             }
-            @include md-above-screen{
+            @include lg-above-screen{
                 max-width: 400px;
             }
             @include sm-below-screen{
@@ -80,13 +75,11 @@
             display: none;
         }
         margin-top: 1.5rem;
-        // background-color: red;
-        display: flex;
-        justify-content: space-between;
-        @include md-above-screen{
+        @include flexbox('', '', space-between);
+        @include lg-above-screen{
             width: 400px;
         }
-        @include md-below-screen{
+        @include lg-below-screen{
             width: 350px;
         }
         img{

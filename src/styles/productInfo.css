@@ -1,0 +1,176 @@
+.productInfo {
+  max-width: 500px;
+  display: grid;
+  grid-template-rows: auto;
+}
+@media only screen and (max-width: 720px) {
+  .productInfo {
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "header header" "tagline tagline" "para para" "money money" "qty cart";
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .productInfo {
+    padding: 4rem 0;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "header header" "tagline tagline" "para para" "money money" "qty ." "cart .";
+  }
+}
+@media only screen and (min-width: 960px) {
+  .productInfo {
+    padding: 4rem 2rem;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "header header" "tagline tagline" "para para" "money money" "qty cart";
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .productInfo {
+    padding: 2rem 2rem;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .productInfo {
+    padding: 2rem 1rem;
+  }
+}
+.productInfo > * {
+  padding-bottom: 1rem;
+}
+@media only screen and (max-width: 720px) {
+  .productInfo > * {
+    max-width: 350px;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .productInfo > * {
+    max-width: 400px;
+  }
+}
+.productInfo h1 {
+  color: hsl(26deg, 100%, 55%);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-top: 2.5rem;
+  grid-area: header;
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .productInfo h1 {
+    margin-top: 0;
+  }
+}
+.productInfo .tagLine {
+  font-size: 2.5rem;
+  font-weight: 900;
+  grid-area: tagline;
+}
+.productInfo p {
+  color: #788091;
+  line-height: 150%;
+  font-size: 14px;
+  grid-area: para;
+}
+.productInfo .price {
+  grid-area: money;
+  font-weight: 900;
+}
+.productInfo .price .priceChild {
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+.productInfo .price .priceChild .activePrice {
+  font-size: 2.5rem;
+}
+.productInfo .price .priceChild .discount {
+  align-self: center;
+  justify-self: self-start;
+  background-color: hsl(25deg, 100%, 94%);
+  color: hsl(26deg, 100%, 55%);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+}
+.productInfo .price .ogPrice {
+  align-self: center;
+  color: hsl(0deg, 0%, 69%);
+  text-decoration: line-through;
+}
+.productInfo .quantity {
+  grid-area: qty;
+  padding: 0;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsl(228deg, 6%, 85%);
+  border-radius: 0.5rem;
+}
+@media only screen and (min-width: 960px) {
+  .productInfo .quantity {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .productInfo .quantity {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .productInfo .quantity {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+.productInfo .quantity .qtyMinus svg, .productInfo .quantity .qtyPlus svg {
+  fill: #FF7E1B;
+  width: 1rem;
+  height: 1rem;
+}
+.productInfo .addToCart {
+  grid-area: cart;
+  padding: 0;
+  background-color: #FF7E1B;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+}
+@media only screen and (max-width: 720px) {
+  .productInfo .addToCart {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .productInfo .addToCart {
+    margin-bottom: 1rem;
+    margin-left: 0;
+    padding: 0.3rem 0.5rem;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .productInfo .addToCart {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .productInfo .addToCart {
+    margin-left: 1rem;
+  }
+}
+.productInfo .addToCart svg {
+  fill: #fff;
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}/*# sourceMappingURL=productInfo.css.map */
