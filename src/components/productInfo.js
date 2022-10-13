@@ -4,7 +4,8 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 
 import minus from '../data/images/icon-minus.svg'
-const ProductInfo = () => {
+const ProductInfo = props => {
+    const { selectedQty, addMinus } = props;
     return (
         <div className='productInfo'>
             <h1>sneaker company</h1>
@@ -20,9 +21,9 @@ const ProductInfo = () => {
                 <div className='ogPrice'>$250.00</div>
             </div>
             <div className='quantity'>
-                <span className="qtyMinus"><FaMinus/></span>
-                <span>0</span>  
-                <span className="qtyPlus"><FaPlus/></span>
+                <span className="qtyMinus" onClick={()=> addMinus(selectedQty-1)}><FaMinus/></span>
+                <span>{selectedQty}</span>  
+                <span className="qtyPlus" onClick={()=> addMinus(selectedQty+1)}><FaPlus/></span>
             </div>
             <div className='addToCart'>
                 <svg viewBox="0 0 24 24">

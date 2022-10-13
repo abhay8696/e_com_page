@@ -14,6 +14,7 @@ import image4 from './data/images/image-product-4.jpg'
 function App() {
   const shoeImages= [image1, image2, image3, image4];
   const [ selected, setSelected ] = useState([shoeImages[0], 1]);
+  const [ selectedQty, setSelectedQty ] = useState(0);
 
   //functions
   const 
@@ -25,13 +26,18 @@ function App() {
       return setSelected([shoeImages[3], 4]);
     }
     return setSelected([shoeImages[num-1], num])
+  },
+  addMinus = num=> {
+    if(num<=0) return setSelectedQty(0);
+    return setSelectedQty(num);
   }
+  
   return (
     <div className="App">
       <Navbar />
       <div className='body'>
         <ImageDiv chooseShoe={chooseShoe} shoeImages={shoeImages} selected={selected}/>
-        <ProductInfo />
+        <ProductInfo selectedQty={selectedQty} addMinus={addMinus}/>
       </div>
     </div>
   );
