@@ -53,7 +53,7 @@ const Navbar = props => {
         if(cartData?.length){
             cartData.forEach(i=> {
                 arr.push(
-                    <div>
+                    <div key={`${i.shoeImg}`}>
                         <img src={i.shoeImg} width='100px'/>
                         <span>qty : {i.qty}</span>
                     </div>

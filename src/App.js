@@ -34,14 +34,28 @@ function App() {
     return setSelectedQty(num);
   },
   addToCart = ()=> {
-    if(selectedQty>0){
-      let data = {
-        shoeImg: selected[0],
-        qty: selectedQty
-      }
-      return setCartData([...cartData, data])
+    if(selectedQty <=0 ) return console.log('empty cart!');
+    let newCart = [];
+    let data = {
+      shoeImg: selected[0],
+      qty: selectedQty
     }
-    return console.log('empty cart!');
+    if(cartData.length){
+      cartData.forEach(i=> {
+        if(data && i.shoeImg===data.shoeImg){
+          newCart.push({
+            shoeImg: i.shoeImg,
+            qty: i.qty+data.qty
+          })
+          data = null;
+        }else{
+          newCart.push(i)
+        }
+      })
+    }
+    if(data) newCart.push(data);
+    return setCartData([...newCart]);
+    // console.log(cartData)
   }
 
   return (
