@@ -70,7 +70,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar cartData={cartData} deleteItem={deleteItem}/>
+      <Navbar cartData={cartData} deleteItem={deleteItem} notification={cartData.length}/>
       <div className='body'>
         <ImageDiv chooseShoe={chooseShoe} shoeImages={shoeImages} selected={selected}/>
         <ProductInfo selectedQty={selectedQty} addMinus={addMinus} addToCart={addToCart}/>
