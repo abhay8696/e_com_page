@@ -116,4 +116,20 @@
 .imageDiv .thumbnails img {
   max-width: 5rem;
   border-radius: 0.5rem;
+  border: 2px solid #fff;
+}
+@media only screen and (max-width: 480px) {
+  .imageDiv .thumbnails img:active {
+    cursor: pointer;
+    opacity: 0.2;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .imageDiv .thumbnails img:hover {
+    cursor: pointer;
+    opacity: 0.2;
+  }
+}
+.imageDiv .thumbnails .thumbImageSelected {
+  opacity: 0.5;
 }/*# sourceMappingURL=imageDiv.css.map */

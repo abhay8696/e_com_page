@@ -9,6 +9,14 @@ import image4 from '../data/images/image-product-4.jpg'
 
 const ImageDiv = props => {
     const { selected, chooseShoe, shoeData } = props;
+    // console.log(selected);
+    // console.log(image1);
+    console.log(image1===selected[0])
+
+    //functions
+    const handleImgClass = img=> {
+        if(img === selected[0]) return 'thumbImageSelected';
+    }
     return (
         <div className='imageDiv'>
             <div className={`previewDiv${selected[1]}`}>
@@ -27,10 +35,11 @@ const ImageDiv = props => {
                 </div>
             </div>
             <div className='thumbnails'>
-                <img src={image1} className='thumbImage' onClick={()=> chooseShoe(1)}/>
-                <img src={image2} className='thumbImage' onClick={()=> chooseShoe(2)}/>
-                <img src={image3} className='thumbImage' onClick={()=> chooseShoe(3)}/>
-                <img src={image4} className='thumbImage' onClick={()=> chooseShoe(4)}/>
+                {/* <img src={image1} className='thumbImageSelected' onClick={()=> chooseShoe(1)}/> */}
+                <img src={image1} className={handleImgClass(image1)} onClick={()=> chooseShoe(1)}/>
+                <img src={image2} className={handleImgClass(image2)} onClick={()=> chooseShoe(2)}/>
+                <img src={image3} className={handleImgClass(image3)} onClick={()=> chooseShoe(3)}/>
+                <img src={image4} className={handleImgClass(image4)} onClick={()=> chooseShoe(4)}/>
             </div>
         </div>
     );

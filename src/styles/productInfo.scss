@@ -120,6 +120,11 @@
         background-color: hsl(228, 6%, 85%);
         border-radius: 0.5rem;
         .qtyMinus, .qtyPlus{
+            &:hover{
+                cursor: pointer;
+            }
+            height: 100%;
+            @include flexbox('', center, center);
             svg{
                 fill: #FF7E1B;
                 width: 1rem;
@@ -130,7 +135,11 @@
     .addToCart{
         grid-area: cart;
         padding: 0;
-        // margin-left: 1rem;
+        background-color: #FF7E1B;
+        border-radius: 0.5rem;
+        &:hover{
+            cursor: pointer;
+        }
         @include md-below-screen{
             margin-bottom: 1rem;
             margin-left: 1rem;
@@ -148,8 +157,6 @@
         @include lg-above-screen{
             margin-left: 1rem;
         }
-        background-color: #FF7E1B;
-        border-radius: 0.5rem;
         @include flexbox('', center, center);
         color: white;
         font-weight: 900;

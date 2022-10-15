@@ -85,6 +85,23 @@
         img{
             max-width: 5rem;
             border-radius: 0.5rem;
+            border: 2px solid #fff;
+            @include sm-below-screen{
+                &:active{
+                    cursor: pointer;
+                    opacity: 0.2;
+                }
+            }
+            @include sm-above-screen{
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.2;
+                }
+            }
+        }
+        .thumbImageSelected{
+            // border: 2px solid #ff7e1b;
+            opacity: 0.5;
         }
     }
 }

@@ -126,6 +126,16 @@
     padding: 0.5rem;
   }
 }
+.productInfo .quantity .qtyMinus, .productInfo .quantity .qtyPlus {
+  height: 100%;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+}
+.productInfo .quantity .qtyMinus:hover, .productInfo .quantity .qtyPlus:hover {
+  cursor: pointer;
+}
 .productInfo .quantity .qtyMinus svg, .productInfo .quantity .qtyPlus svg {
   fill: #FF7E1B;
   width: 1rem;
@@ -142,6 +152,9 @@
   justify-content: center;
   color: white;
   font-weight: 900;
+}
+.productInfo .addToCart:hover {
+  cursor: pointer;
 }
 @media only screen and (max-width: 720px) {
   .productInfo .addToCart {

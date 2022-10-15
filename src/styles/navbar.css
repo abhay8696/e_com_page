@@ -253,7 +253,7 @@
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 5px;
+  grid-column-gap: 1rem;
   grid-row-gap: 5px;
   margin-bottom: 1rem;
 }
@@ -284,6 +284,20 @@
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 480px) {
+  .cartDiv .cartBody .delete svg:active {
+    cursor: pointer;
+    color: hsl(217deg, 48%, 5%);
+    fill: hsl(217deg, 48%, 5%);
+  }
+}
+@media only screen and (min-width: 480px) {
+  .cartDiv .cartBody .delete svg:hover {
+    cursor: pointer;
+    color: hsl(217deg, 48%, 5%);
+    fill: hsl(217deg, 48%, 5%);
+  }
+}
 .cartDiv .cartBody .num {
   font-weight: 900;
   color: #000;
@@ -297,4 +311,18 @@
   border-radius: 1rem;
   margin-bottom: 1rem;
   font-weight: 900;
+}
+@media only screen and (max-width: 480px) {
+  .cartDiv .checkout:active {
+    cursor: pointer;
+    color: hsl(217deg, 48%, 5%);
+    fill: hsl(217deg, 48%, 5%);
+  }
+}
+@media only screen and (min-width: 480px) {
+  .cartDiv .checkout:hover {
+    cursor: pointer;
+    color: hsl(217deg, 48%, 5%);
+    fill: hsl(217deg, 48%, 5%);
+  }
 }/*# sourceMappingURL=navbar.css.map */
