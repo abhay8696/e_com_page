@@ -56,11 +56,21 @@ function App() {
     if(data) newCart.push(data);
     return setCartData([...newCart]);
     // console.log(cartData)
+  },
+  deleteItem = shoe=> {
+    console.log('delete')
+    console.log(shoe);
+    let newCart = [];
+    cartData.forEach(i=> {
+      if(i.shoeImg !== shoe) newCart.push(i);
+    })
+    setCartData([...newCart]);
+    return console.log(newCart);
   }
 
   return (
     <div className="App">
-      <Navbar cartData={cartData}/>
+      <Navbar cartData={cartData} deleteItem={deleteItem}/>
       <div className='body'>
         <ImageDiv chooseShoe={chooseShoe} shoeImages={shoeImages} selected={selected}/>
         <ProductInfo selectedQty={selectedQty} addMinus={addMinus} addToCart={addToCart}/>
