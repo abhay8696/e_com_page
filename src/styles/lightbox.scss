@@ -1,0 +1,60 @@
+@import 'breakpoints';
+@import 'flexbox';
+
+.lightBox{
+    max-height: 100vh;
+}
+.lightBack{
+    background-color: rgba(0, 0, 0, 0.685);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    @include sm-below-screen{
+        display: none;
+    }
+}
+.lightBody{
+    @include sm-below-screen{
+        display: none;
+    }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    .mainImg{
+        max-width: 500px;
+        border-radius: 1.5rem;
+    }
+    .leftArrow, .rightArrow{
+        height: 4rem;
+        width: 4rem;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        svg{
+            fill: none;
+        }
+        @include flexbox('', center, center);
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .leftArrow{
+        svg{
+            transform: translate(-25%);
+        }
+    }
+    .rightArrow{
+        left: 100%;
+    }
+    .thumbnails{
+        position: fixed;
+        z-index: 10;
+
+    }
+}

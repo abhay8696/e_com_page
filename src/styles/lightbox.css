@@ -1,0 +1,63 @@
+.lightBox {
+  max-height: 100vh;
+}
+
+.lightBack {
+  background-color: rgba(0, 0, 0, 0.685);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+}
+@media only screen and (max-width: 480px) {
+  .lightBack {
+    display: none;
+  }
+}
+
+.lightBody {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+@media only screen and (max-width: 480px) {
+  .lightBody {
+    display: none;
+  }
+}
+.lightBody .mainImg {
+  max-width: 500px;
+  border-radius: 1.5rem;
+}
+.lightBody .leftArrow, .lightBody .rightArrow {
+  height: 4rem;
+  width: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+}
+.lightBody .leftArrow svg, .lightBody .rightArrow svg {
+  fill: none;
+}
+.lightBody .leftArrow:hover, .lightBody .rightArrow:hover {
+  cursor: pointer;
+}
+.lightBody .leftArrow svg {
+  transform: translate(-25%);
+}
+.lightBody .rightArrow {
+  left: 100%;
+}
+.lightBody .thumbnails {
+  position: fixed;
+  z-index: 10;
+}/*# sourceMappingURL=lightbox.css.map */

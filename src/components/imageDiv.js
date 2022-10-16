@@ -8,7 +8,7 @@ import image3 from '../data/images/image-product-3.jpg'
 import image4 from '../data/images/image-product-4.jpg'
 
 const ImageDiv = props => {
-    const { selected, chooseShoe, shoeData } = props;
+    const { selected, chooseShoe, shoeData, toggleLightMode } = props;
     // console.log(selected);
     // console.log(image1);
     console.log(image1===selected[0])
@@ -20,7 +20,7 @@ const ImageDiv = props => {
     return (
         <div className='imageDiv'>
             <div className={`previewDiv${selected[1]}`}>
-                <img src={selected[0]} className='productImage'/>
+                <img src={selected[0]} className='productImage' onClick={toggleLightMode}/>
                 <div className='arrowButt'>
                     <svg onClick={()=> chooseShoe((selected[1]-1))}
                         xmlns="http://www.w3.org/2000/svg" width="12" height="18">

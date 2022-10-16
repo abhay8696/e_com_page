@@ -1,3 +1,6 @@
+.App {
+  position: relative;
+}
 .App * {
   box-sizing: border-box;
   padding: 0;

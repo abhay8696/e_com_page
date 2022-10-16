@@ -10,12 +10,14 @@ import image1 from './data/images/image-product-1.jpg'
 import image2 from './data/images/image-product-2.jpg'
 import image3 from './data/images/image-product-3.jpg'
 import image4 from './data/images/image-product-4.jpg'
+import Lightbox from './components/lightbox';
 
 function App() {
   const shoeImages= [image1, image2, image3, image4];
   const [ selected, setSelected ] = useState([shoeImages[0], 1]);
   const [ selectedQty, setSelectedQty ] = useState(0);
   const [ cartData, setCartData ] = useState([]);
+  const [ lightMode, setLightMode ] = useState(false);
 
   //functions
   const 
@@ -66,15 +68,26 @@ function App() {
     })
     setCartData([...newCart]);
     return console.log(newCart);
+  },
+  toggleLightMode = ()=> {
+    return setLightMode(!lightMode);
   }
 
   return (
     <div className="App">
       <Navbar cartData={cartData} deleteItem={deleteItem} notification={cartData.length}/>
       <div className='body'>
-        <ImageDiv chooseShoe={chooseShoe} shoeImages={shoeImages} selected={selected}/>
+        <ImageDiv chooseShoe={chooseShoe} shoeImages={shoeImages} selected={selected} toggleLightMode={toggleLightMode}/>
         <ProductInfo selectedQty={selectedQty} addMinus={addMinus} addToCart={addToCart}/>
       </div>
+      {lightMode ? 
+        <Lightbox 
+          toggleLightMode={toggleLightMode} 
+          lightMode={lightMode}
+          shoeImages={shoeImages}
+          selected={selected}
+        /> 
+      : null}
     </div>
   );
 }
