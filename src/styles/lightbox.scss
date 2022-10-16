@@ -5,7 +5,7 @@
     max-height: 100vh;
 }
 .lightBack{
-    background-color: rgba(0, 0, 0, 0.685);
+    background-color: rgba(0, 0, 0, 0.801);
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -20,12 +20,15 @@
         display: none;
     }
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
     .mainImg{
-        max-width: 500px;
+        max-width: 550px;
+        @include sm-md-screen{
+            max-width: 450px;
+        }
         border-radius: 1.5rem;
     }
     .leftArrow, .rightArrow{
@@ -53,8 +56,28 @@
         left: 100%;
     }
     .thumbnails{
-        position: fixed;
-        z-index: 10;
-
+        position: absolute;
+        bottom: -9rem;
+        width: 550px;
+        @include sm-md-screen{
+            bottom: -7rem;
+            max-width: 450px;
+        }
+        @include flexbox('', center, space-evenly);
+        img{
+            max-width: 90px;
+            @include sm-md-screen{
+                max-width: 75px;
+            }
+            border-radius: 1rem;
+            &:hover{
+                cursor: pointer;
+                opacity: 0.3;
+            }
+        }
+        .thumbImageSelected{
+            // border: 2px solid #ff7e1b;
+            opacity: 0.5;
+        }
     }
 }

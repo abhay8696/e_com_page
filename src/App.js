@@ -86,6 +86,7 @@ function App() {
           lightMode={lightMode}
           shoeImages={shoeImages}
           selected={selected}
+          chooseShoe={chooseShoe}
         /> 
       : null}
     </div>

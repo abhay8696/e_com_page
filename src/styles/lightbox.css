@@ -3,7 +3,7 @@
 }
 
 .lightBack {
-  background-color: rgba(0, 0, 0, 0.685);
+  background-color: rgba(0, 0, 0, 0.801);
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -18,7 +18,7 @@
 
 .lightBody {
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -29,8 +29,13 @@
   }
 }
 .lightBody .mainImg {
-  max-width: 500px;
+  max-width: 550px;
   border-radius: 1.5rem;
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .lightBody .mainImg {
+    max-width: 450px;
+  }
 }
 .lightBody .leftArrow, .lightBody .rightArrow {
   height: 4rem;
@@ -58,6 +63,33 @@
   left: 100%;
 }
 .lightBody .thumbnails {
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  bottom: -9rem;
+  width: 550px;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .lightBody .thumbnails {
+    bottom: -7rem;
+    max-width: 450px;
+  }
+}
+.lightBody .thumbnails img {
+  max-width: 90px;
+  border-radius: 1rem;
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .lightBody .thumbnails img {
+    max-width: 75px;
+  }
+}
+.lightBody .thumbnails img:hover {
+  cursor: pointer;
+  opacity: 0.3;
+}
+.lightBody .thumbnails .thumbImageSelected {
+  opacity: 0.5;
 }/*# sourceMappingURL=lightbox.css.map */
