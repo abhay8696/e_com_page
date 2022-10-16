@@ -45,6 +45,11 @@
         @include flexbox('', center, center);
         &:hover{
             cursor: pointer;
+            svg{
+                path{
+                    stroke: #ff7e1b;
+                }
+            }
         }
     }
     .leftArrow{

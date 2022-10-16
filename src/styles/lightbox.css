@@ -56,6 +56,9 @@
 .lightBody .leftArrow:hover, .lightBody .rightArrow:hover {
   cursor: pointer;
 }
+.lightBody .leftArrow:hover svg path, .lightBody .rightArrow:hover svg path {
+  stroke: #ff7e1b;
+}
 .lightBody .leftArrow svg {
   transform: translate(-25%);
 }
