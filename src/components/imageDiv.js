@@ -9,9 +9,6 @@ import image4 from '../data/images/image-product-4.jpg'
 
 const ImageDiv = props => {
     const { selected, chooseShoe, shoeData, toggleLightMode } = props;
-    // console.log(selected);
-    // console.log(image1);
-    console.log(image1===selected[0])
 
     //functions
     const handleImgClass = img=> {

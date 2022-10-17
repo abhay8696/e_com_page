@@ -261,8 +261,8 @@
                 @include sm-above-screen{
                     &:hover{
                         cursor: pointer;
-                        color: hsl(217, 48%, 5%);
-                        fill:hsl(217, 48%, 5%);
+                        color: #ff7e1b;
+                        fill:#ff7e1b;
                     }
                 }
             }

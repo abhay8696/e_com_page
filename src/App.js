@@ -15,14 +15,14 @@ import Lightbox from './components/lightbox';
 function App() {
   const shoeImages= [image1, image2, image3, image4];
   const [ selected, setSelected ] = useState([shoeImages[0], 1]);
-  const [ selectedQty, setSelectedQty ] = useState(0);
+  const [ selectedQty, setSelectedQty ] = useState(1);
   const [ cartData, setCartData ] = useState([]);
   const [ lightMode, setLightMode ] = useState(false);
 
   //functions
   const 
   chooseShoe = num=> {
-    setSelectedQty(0);
+    setSelectedQty(1);
     if(num >= 5){
       return setSelected([shoeImages[0], 1]);
     }

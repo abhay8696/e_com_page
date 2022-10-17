@@ -294,8 +294,8 @@
 @media only screen and (min-width: 480px) {
   .cartDiv .cartBody .delete svg:hover {
     cursor: pointer;
-    color: hsl(217deg, 48%, 5%);
-    fill: hsl(217deg, 48%, 5%);
+    color: #ff7e1b;
+    fill: #ff7e1b;
   }
 }
 .cartDiv .cartBody .num {
