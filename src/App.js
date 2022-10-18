@@ -89,6 +89,8 @@ function App() {
           chooseShoe={chooseShoe}
         /> 
       : null}
+
+      <p>Frontend Mentor Solution by <a href='https://github.com/abhay8696/e_com_page.git' target="_blank">abhay8696</a></p>
     </div>
   );
 }

@@ -85,7 +85,7 @@ const Navbar = props => {
             >
                 <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/>
             </svg>
-            <img src={logo}/>
+            <img src={logo} alt='SNEAKERS'/>
             </div>
             <div className='menu'>
                 <span>Collections</span>
@@ -107,7 +107,7 @@ const Navbar = props => {
                         null
                     }
                 </div>
-                <img src={profileImage} className='profile_image'/>
+                <img src={profileImage} className='profile_image' alt='profile image'/>
             </div>
         </div>
         {sideBar ? showSideBar() : null}

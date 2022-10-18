@@ -17,7 +17,7 @@ const ImageDiv = props => {
     return (
         <div className='imageDiv'>
             <div className={`previewDiv${selected[1]}`}>
-                <img src={selected[0]} className='productImage' onClick={toggleLightMode}/>
+                <img src={selected[0]} className='productImage' onClick={toggleLightMode} alt='main preview'/>
                 <div className='arrowButt'>
                     <svg onClick={()=> chooseShoe((selected[1]-1))}
                         xmlns="http://www.w3.org/2000/svg" width="12" height="18">
@@ -33,10 +33,10 @@ const ImageDiv = props => {
             </div>
             <div className='thumbnails'>
                 {/* <img src={image1} className='thumbImageSelected' onClick={()=> chooseShoe(1)}/> */}
-                <img src={image1} className={handleImgClass(image1)} onClick={()=> chooseShoe(1)}/>
-                <img src={image2} className={handleImgClass(image2)} onClick={()=> chooseShoe(2)}/>
-                <img src={image3} className={handleImgClass(image3)} onClick={()=> chooseShoe(3)}/>
-                <img src={image4} className={handleImgClass(image4)} onClick={()=> chooseShoe(4)}/>
+                <img src={image1} alt='image1' className={handleImgClass(image1)} onClick={()=> chooseShoe(1)}/>
+                <img src={image2} alt='image2' className={handleImgClass(image2)} onClick={()=> chooseShoe(2)}/>
+                <img src={image3} alt='image3' className={handleImgClass(image3)} onClick={()=> chooseShoe(3)}/>
+                <img src={image4} alt='image4' className={handleImgClass(image4)} onClick={()=> chooseShoe(4)}/>
             </div>
         </div>
     );
